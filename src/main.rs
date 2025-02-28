@@ -21,6 +21,7 @@ impl CommandHandler {
     fn new() -> Self {
         let mut commands = HashMap::new();
         commands.insert("$ping", commands::ping::handle_ping as CommandFn);
+        commands.insert("$race", commands::race::handle_race as CommandFn);
         Self { commands }
     }
 
